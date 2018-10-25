@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>BMI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,400,600&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="bmi.css" />
+    
+</head>
+<body>
+    <div class="container" id="first">
+        <h2>Lorem Ipsum</h2>
+        <p class="topText">Please enter your date of birth, height and weight. Once this is done, click on Male or Female button and see your Body Mass Index</p>
+    </div>
+    <div class="container" id="second">
+        <h4>Date of birth</h4>
+        <input type="date" class="input" id="date" placeholder="yyyy-mm-dd" min="1920-01-01" max="2000-09-17" />
+    </div>
+    <div class="container" id="third">
+        <div class="row">
+            <div class="col-md-6 height" id="kairys">
+                <h4>Height</h4>
+                <div class="mygtukai">
+                    <button class="imperial" id="imperialHeight" onclick="toImperialH()">Imperial</button>
+                    <button class="metric active" id="metricHeight" onclick="toMetricH()">Metric</button>
+                </div>
+                <input class="input" type="text" placeholder=" Enter your height" style="margin-top: 10px;" id="heightInput"><p style="display: inline" id="heightUnits">cm</p>
+            </div>
+            <div class="col-md-6 weight">
+                <h4>Weight</h4>
+                <div class="mygtukai">
+                    <button class="imperial" id="imperialWeight" onclick="toImperialW()">Imperial</button>
+                    <button class="metric active" id="metricWeight" onclick="toMetricW()">Metric</button>
+                </div>
+                <input class="input" type="text" placeholder=" Enter your weight" style="margin-top: 10px;" id="weightInput"><p style="display: inline" id="weightUnits">kg</p>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="fourth">
+        <h4 style="padding: 10px 0px 10px 0px;">Gender</h4>
+        <div class="mygtukai">
+            <button class="maleButton imperial active" onclick="showResult()">Male</button>
+            <button class="femaleButton imperial" onclick="showResult()">Female</button>
+        </div>
+    </div>
+    <div class="container" id="fifth">
+        <h5><b>Body mass index (BMI) = </b><i class="answer"></i></h5>
+        <br>
+        <img class="arrow" src="./assets/Triangle.png">
+        <br>
+        <div class="rulerContainer">
+            <div class="ruler" id="underweight">Underweight</div><div class="ruler" id="healthWeight">Health Weight</div><div class="ruler" id="overweight">Overweight</div><div class="ruler" id="obese">Obese</div>
+        </div>
+        <a class="grades" id="eighteen">18.5</a><a class="grades" id="twentyfive">25</a><a class="grades" id="thirty">30</a>
+    </div> 
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="bmi.js"></script>
+</body>
+</html>
